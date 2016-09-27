@@ -42,7 +42,11 @@ fetchEnhance('/url').catch(/* ... */)
 
 ### fetchEnhance(...options)
 
-The same as the options in `window.fetch`.
+Used in browser environment, the same as the options in `window.fetch`.
+
+### fetchEnhance(fetchImplementation)
+
+Used in Node.js environment, returns a function using the provided fetch implementation, for example: `const fetchImplementation = require('node-fetch')`
 
 ## Contributing
 
