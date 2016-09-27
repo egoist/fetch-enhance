@@ -1,0 +1,44 @@
+{
+  "name": "fetch-enhance",
+  "version": "0.0.0",
+  "description": "A fetch wrapper which knows to reject on bad reponse status.",
+  "license": "MIT",
+  "repository": "egoist/fetch-enhance",
+  "author": {
+    "name": "EGOIST",
+    "email": "0x142857@gmail.com",
+    "url": "github.com/egoist"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "bubleup --format umd && jest && eslint src/*",
+    "build": "bubleup --format umd --compress"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/fetch-enhance.js",
+  "keywords": [
+    "fetch",
+    "error",
+    "network"
+  ],
+  "devDependencies": {
+    "bubleup": "^0.5.2",
+    "eslint": "latest",
+    "eslint-config-egoist": "latest",
+    "jest-cli": "^15.1.1",
+    "jest-fetch-mock": "^1.0.5",
+    "node-fetch": "^1.6.3"
+  },
+  "jest": {
+    "setupFiles": [
+      "./__test__/setup-jest.js"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "egoist/esnext-browser"
+  }
+}
