@@ -9,13 +9,14 @@ class NetworkError extends Error {
 
 export default function fetchEnhance(...payload) {
   const res = data => {
-    if (!data.ok) {
-      const error = new NetworkError(data.statusText)
-      error.status = data.status
-      error.headers = data.headers
-      error.data = data
-      throw error
+    if (data.ok) {
+      return data
     }
+    const error = new NetworkError(data.statusText)
+    error.status = data.status
+    error.headers = data.headers
+    error.data = data
+    throw error
   }
 
   if (typeof window !== 'undefined') {
