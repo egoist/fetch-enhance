@@ -30,7 +30,6 @@
     "eslint": "latest",
     "eslint-config-egoist": "latest",
     "jest-cli": "^15.1.1",
-    "jest-fetch-mock": "^1.0.5",
     "node-fetch": "^1.6.3"
   },
   "jest": {
